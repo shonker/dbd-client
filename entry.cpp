@@ -23,13 +23,13 @@
 
 int core( )
 {
-	bool integrity_status = true;
+	/*bool integrity_status = true;
 
 	if constexpr ( !settings::values::using_auth )
 		integrity_status = true;
 
 	if ( integrity_status )
-	{
+	{*/
 		while ( !FindWindowA( "UnrealWindow", nullptr ) )
 			std::this_thread::sleep_for( std::chrono::seconds( 1 ) );
 
@@ -42,11 +42,11 @@ int core( )
 
 		std::thread( []( )
 			{ renderer::start( xs( "UnrealWindow" ) ); } ).detach( );
-	}
+	/*}
 	else
 	{
 		_Exit( 0 );
-	}
+	}*/
 
 	return 0;
 }
